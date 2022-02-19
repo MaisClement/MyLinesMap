@@ -50,7 +50,7 @@ async function init(){
 
     var map = L.map('map').setView([coords[0], coords[1]], coords[2]);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors | &copy; <a href="https://www.here.com/">HERE</a> | <a href="https://train-empire.com">Train Empire</a> | <a href="https://mylines.fr">MyLines</a> | <a href="contribute.php">Contribuer</a>' 
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors | &copy; <a href="https://www.here.com/">HERE</a> | <a href="https://train-empire.com">Train Empire</a> | <a href="contribute.php">Contribuer</a> | <a href="https://github.com/MaisClement/MyLinesMap">Code Source</a>' 
     }).addTo(map);
 
     map.on('zoom', function(e) {

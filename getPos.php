@@ -34,7 +34,9 @@ $search = array("&", "?", "=", '"');
 $replace = array("", "", "",  "");
 $q = str_replace($search, $replace, $q);
 
-$url = 'https://geocode.search.hereapi.com/v1/geocode?q=' . $q . '&apiKey=zQSZ9dpQFyueTgu2gnCDFp0_h62oqWHyCUtJhRKSfzI';
+$apiKey = file_get_contents('here_api_key.txt');
+
+$url = 'https://geocode.search.hereapi.com/v1/geocode?q=' . $q . '&apiKey=' . $apiKey;
 
 $json = file_get_contents_curl($url);
 echo $json;

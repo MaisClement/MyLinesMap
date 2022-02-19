@@ -4,9 +4,6 @@ error_reporting(0);
 ini_set('display_errors', 0);
 
 header('Access-Control-Allow-Origin: *');
-header('Content-Type: text/html; charset=utf-8');
-header("Content-type:application/json");
-
 
 function file_get_contents_curl($url) {
 	$ch = curl_init();
@@ -34,7 +31,7 @@ $search = array("&", "?", "=", '"');
 $replace = array("", "", "",  "");
 $q = str_replace($search, $replace, $q);
 
-$apiKey = file_get_contents('here_api_key.txt');
+$apiKey = file_get_contents('.here_api_key.txt');
 
 $url = 'https://geocode.search.hereapi.com/v1/geocode?q=' . $q . '&apiKey=' . $apiKey;
 

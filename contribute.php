@@ -1,4 +1,4 @@
-<?php
+<?php header('Access-Control-Allow-Origin: *');
 
 function FormatName($Gare){
      $Gare = preg_replace("/\([^)]+\)/","",$Gare);

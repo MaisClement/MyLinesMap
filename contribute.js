@@ -17,7 +17,7 @@ async function get_report(){
 
         for (i = 0; i < text.length; i++){
             console.log(text[i].name);
-            echo = echo + '<a class="overmouse" onclick="place(\'' + text[i].name + '\')"><div>' + text[i].name + '</div></a>';
+            echo = echo + '<a class="overmouse" onclick="place(\'' + text[i].name.replace('\'', '’') + '\')"><div>' + text[i].name + '</div></a>';
         }
 
         document.getElementById('list').innerHTML = echo;
